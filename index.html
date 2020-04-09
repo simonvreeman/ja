@@ -6,22 +6,71 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
     <link rel="preconnect dns-prefetch" href="https://www.google-analytics.com" crossorigin>
     <style>
+      :root {
+        --primary: rgba(0, 0, 0, .8);
+        --secondary: rgb(65, 110, 210);
+        --tertiary: rgb(204, 204, 204);
+        --serif: Georgia, serif;
+        --sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", system-ui, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
+        --mono: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Monaco, "Courier New", monospace;
+      }
       html {
-        font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", system-ui, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-        font-size: 1.125rem;
+        font-family: var(--serif);
+        font-size: 1.25rem;
         line-height: 1.618;
+        text-rendering: geometricPrecision;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: subpixel-antialiased;
       }
       body {
         margin: 0 auto;
-        max-width: 40rem;
+        max-width: 32rem;
+        padding: 0 3%;
+        word-wrap: break-word;
+      }
+      header, main, footer {
+        display: block;
+      }
+      header, footer {
         text-align: center;
       }
-      h1 {
-        font-weight: inherit;
+      header {
+        border-bottom: 1px solid var(--tertiary);
+        margin: 5% auto 2.5%;
+      }
+      main {
+        margin: 0 auto;
+      }
+      footer {
+        border-top: 1px solid var(--tertiary);
+        margin: 2.5% auto 5%;
+        font-size: 80%;
+      }
+      footer, footer a {
+        color: var(--tertiary);
+      }
+      h1, h2, h3, h4 {
+        font-family: var(--sans-serif);
+        /*font-weight: inherit;*/
+        line-height: 1;
+        word-spacing: 0.1618rem;
+        margin: 2.5rem 0 1rem 0;
+      }
+      p {
+        margin: 0;
       }
       a {
-        color: black;
-        text-decoration: none;
+        background-color: transparent;
+        color: var(--secondary);
+        -webkit-text-decoration-skip: ink;
+        text-decoration-skip: ink;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+      }
+      address {
+        font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Monaco, "Courier New", monospace;
+        font-size: 1em;
+        font-style: normal;
       }
     </style>
     <script>
@@ -36,7 +85,42 @@
     <meta name="description" content="Welke jenever merken komt uit Amsterdam? Waar drink je jenever in Amsterdam?">
   </head>
   <body>
-    <h1><a href="https://jenever.amsterdam" onclick="ga('send','event','click','link','homepage',{nonInteraction:true});">Jenever in Amsterdam</a></h1>
-    <p>binnenkort meer... jenever</p>
+    <header>
+      <h1>Jenever in Amsterdam</h1>
+      
+    </header>
+    <main>
+      <h2>Welk jenever merken komen uit Amsterdam?</h2>
+      <ul>
+        <li>Wynand Fockink</li>
+      </ul>
+
+      <h2>Waar in Amsterdam drink je jenever?</h2>
+      <!-- https://developers.google.com/places/place-id -->
+      <h4>Wynand Fockink Proeflokaal & Slijterij</h4>
+      <p>Heeft heel veel lekkere jenevers en likeuren. Zoals de Vijf.</p>
+      <address><a href="https://www.google.com/maps/dir/?api=1&destination=jenever&destination_place_id=ChIJ_1DTVccJxkcRDttrB9MqOLc" target="_blank" rel="noopener">Pijlsteeg 31, 1012 HH Amsterdam</a></address>
+
+      <h4>Lokaal 't Loosje</h4>
+      <p>Grote kans dat je JP hier aantreft met een kopstootje.</p>
+      <address><a href="https://www.google.com/maps/dir/?api=1&destination=jenever&destination_place_id=ChIJcSO5L7kJxkcR-ghN1cETMhw" target="_blank" rel="noopener">Nieuwmarkt 32, 1012 CS Amsterdam</a></address>
+
+      <h3>Hoe drink je jenever?</h3>
+      <p>Handjes op de rug. Voorover buigen. Eerste slok van het glas af slurpen. Genieten.</p>
+
+      <h3>Kopstootje?</h3>
+      <p>Handjes op de rug. Voorover buigen. Eerste slok van het glas af slurpen. Genieten. Gevolgd door een slokje van je biertje.</p>      
+
+      <h2>Wat is jenever?</h2>
+
+      <h3>Het verschil tussem oude jenever en jonge jenever</h3>
+      
+      <h3>Genever en gin?</h3>
+      
+    </main>
+    <footer>
+      <!-- <hr> -->
+      <p>Ondersteund door <a href="https://vreeman.com" title="Simon Vreeman" target="_blank" rel="noopener" onclick="ga('send','event','click','link','vreeman.com',{nonInteraction:true});">Simon Vreeman</a>.</p>
+    </footer>
   </body>
 </html>
