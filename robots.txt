@@ -1,0 +1,4 @@
+# www.robotstxt.org/
+
+Sitemap: https://jenever.amsterdam/sitemap.xml
+host: https://jenever.amsterdam
